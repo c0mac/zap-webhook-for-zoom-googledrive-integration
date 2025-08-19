@@ -45,6 +45,42 @@ curl -X POST http://localhost:3000/webhook \
   }'
 ```
 
+## Deployment
+
+### Vercel Deployment
+
+This project is configured for easy deployment on Vercel:
+
+1. **Install Vercel CLI** (optional):
+
+   ```bash
+   npm i -g vercel
+   ```
+
+2. **Deploy to Vercel**:
+
+   ```bash
+   vercel
+   ```
+
+   Or connect your GitHub repository to Vercel for automatic deployments.
+
+3. **Environment Variables**: Set your environment variables in the Vercel dashboard:
+
+   - Go to your project settings
+   - Add any required environment variables from your `.env` file
+
+4. **Webhook URL**: After deployment, your webhook will be available at:
+   ```
+   https://your-project-name.vercel.app/webhook
+   ```
+
+### Local Development
+
+```bash
+npm run dev
+```
+
 ## Next Steps
 
 Add your business logic in the TODO section of `server.js`:
