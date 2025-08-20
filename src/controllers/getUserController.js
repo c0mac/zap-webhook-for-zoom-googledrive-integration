@@ -12,6 +12,7 @@ const processWebhook = async (req, res) => {
       success: true,
       message: "Downloads fetched successfully",
       downloads: mp4Downloads,
+      length: mp4Downloads.length,
     });
   } catch (error) {
     console.error(error);
