@@ -89,16 +89,16 @@ const processWebhook = async (req, res) => {
       success: true,
       message: "Webhook processed successfully",
       data: data,
-      metadata: {
-        requestId,
-        processingTime: `${processingTime}ms`,
-        timestamp: new Date().toISOString(),
-        user_id: sanitizedUserId,
-        dateRange: {
-          from: sanitizedFrom,
-          to: sanitizedTo,
-        },
-      },
+      // metadata: {
+      //   requestId,
+      //   processingTime: `${processingTime}ms`,
+      //   timestamp: new Date().toISOString(),
+      //   user_id: sanitizedUserId,
+      //   dateRange: {
+      //     from: sanitizedFrom,
+      //     to: sanitizedTo,
+      //   },
+      // },
     });
   } catch (error) {
     const processingTime = Date.now() - startTime;
